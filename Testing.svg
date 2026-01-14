@@ -1,0 +1,88 @@
+<svg
+  id="CampusMap"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 2000 1200"
+  width="100%"
+  height="100%"
+  preserveAspectRatio="xMidYMid meet"
+>
+
+  <!-- ====== STYLES ====== -->
+  <style>
+    .building { fill:#E3F2FD; stroke:#1565C0; stroke-width:4; }
+    .room { fill:#BBDEFB; stroke:#0D47A1; stroke-width:2; cursor:pointer; }
+    .room:hover { fill:#90CAF9; }
+    .occupied { fill:#EF9A9A; }
+    .empty { fill:#A5D6A7; }
+    .label { font-size:28px; font-family:Arial; fill:#0D47A1; pointer-events:none; }
+    .icon { fill:#263238; }
+    .path { fill:none; stroke:#455A64; stroke-width:8; stroke-dasharray:10 6; }
+  </style>
+
+  <!-- ====== BACKGROUND ====== -->
+  <rect x="0" y="0" width="2000" height="1200" fill="#FAFAFA"/>
+
+  <!-- ====== BUILDING A ====== -->
+  <g id="BuildingA">
+    <rect x="100" y="100" width="700" height="500" class="building"/>
+    <text x="380" y="90" class="label">Building A</text>
+
+    <rect id="A101" x="140" y="160" width="200" height="140" class="room empty"/>
+    <text x="190" y="240" class="label">A-101</text>
+
+    <rect id="A102" x="380" y="160" width="200" height="140" class="room occupied"/>
+    <text x="430" y="240" class="label">A-102</text>
+
+    <rect id="A103" x="140" y="340" width="200" height="140" class="room empty"/>
+    <text x="190" y="420" class="label">A-103</text>
+
+    <rect id="A104" x="380" y="340" width="200" height="140" class="room occupied"/>
+    <text x="430" y="420" class="label">A-104</text>
+  </g>
+
+  <!-- ====== BUILDING B ====== -->
+  <g id="BuildingB">
+    <rect x="1000" y="120" width="700" height="520" class="building"/>
+    <text x="1280" y="100" class="label">Building B</text>
+
+    <rect id="B201" x="1040" y="180" width="240" height="160" class="room empty"/>
+    <text x="1100" y="270" class="label">B-201</text>
+
+    <rect id="B202" x="1320" y="180" width="240" height="160" class="room occupied"/>
+    <text x="1380" y="270" class="label">B-202</text>
+
+    <rect id="B203" x="1040" y="380" width="240" height="160" class="room empty"/>
+    <text x="1100" y="470" class="label">B-203</text>
+
+    <rect id="B204" x="1320" y="380" width="240" height="160" class="room empty"/>
+    <text x="1380" y="470" class="label">B-204</text>
+  </g>
+
+  <!-- ====== WALKING PATH ====== -->
+  <path d="M800 360 L1000 360" class="path"/>
+
+  <!-- ====== ICONS ====== -->
+  <g id="Icons">
+    <!-- Parking icon -->
+    <rect x="880" y="700" width="120" height="120" rx="20" fill="#FFF176"/>
+    <text x="920" y="780" font-size="80" font-family="Arial">P</text>
+
+    <!-- Elevator icon -->
+    <rect x="480" y="700" width="120" height="120" rx="20" fill="#B2EBF2"/>
+    <polygon points="540,730 500,780 580,780" class="icon"/>
+    <polygon points="540,810 500,760 580,760" class="icon"/>
+  </g>
+
+  <!-- ====== LEGEND ====== -->
+  <g id="Legend">
+    <rect x="1500" y="720" width="360" height="260" fill="#FFFFFF" stroke="#BDBDBD"/>
+    <text x="1520" y="760" class="label">Legend</text>
+
+    <rect x="1520" y="800" width="40" height="40" class="room empty"/>
+    <text x="1580" y="830" class="label">Empty</text>
+
+    <rect x="1520" y="860" width="40" height="40" class="room occupied"/>
+    <text x="1580" y="890" class="label">Occupied</text>
+  </g>
+
+</svg>
